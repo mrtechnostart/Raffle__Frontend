@@ -84,19 +84,23 @@ const EnterRaffle = () => {
       {ContractAddress ? (
         <div>
           <button
-            className="btn btn-primary"
+            className="btn btn-primary mx-3"
             disabled={isLoading || isFetching}
             onClick={participateRaffle}
           >
             {isLoading || isFetching?"Wait Now":"Enter Raffle"}
           </button>
+          <div className="container-fluid p-3">
+          <div>
           {EntranceFee === "0"
             ? "Loading Entrance Fee"
             : "The Entrance Fee is " +
               ethers.utils.formatUnits(EntranceFee, "ether") +
               " ETH"}
+            </div>
           <div>Total Participants are {PlayerNumber} </div>
           <div>The Recent Winner is {RecentWinner} </div>
+        </div>
         </div>
       ) : (
         <div>Not on a supported chain</div>

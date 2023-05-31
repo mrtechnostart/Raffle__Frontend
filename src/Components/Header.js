@@ -3,10 +3,13 @@ import { ConnectButton } from 'web3uikit'
 
 const Header = () => {
   return (
-    <div>
-        <p>Decentralized Lottery</p>
+    <>
+    <div className='d-flex flex-column flex-sm-row justify-content-between m-5 align-items-center'>
+        <p className='h3'>Decentralized Lottery</p>
       <ConnectButton moralisAuth={false}/>
     </div>
+    <hr/>
+    </>
   )
 }
 
