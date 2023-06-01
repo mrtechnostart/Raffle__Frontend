@@ -9,7 +9,7 @@ const EnterRaffle = () => {
   const [PlayerNumber, setPlayerNumber] = useState("0");
   const [RecentWinner, setRecentWinner] = useState("0");
   const dispatch = useNotification();
-  const { chainId: chainIdHex, isWeb3Enabled } = useMoralis();
+  const { chainId: chainIdHex, isWeb3Enabled, account } = useMoralis();
   const chainId = parseInt(chainIdHex);
   const ContractAddress =
     chainId in contractAddress ? contractAddress[chainId][0] : null;
@@ -42,6 +42,7 @@ const EnterRaffle = () => {
     functionName: "getRecentWinner",
     params: {},
   });
+  
   async function getEntrance() {
     const entranceFee = (await getEntranceFee()).toString();
     const playerNo = (await getPlayersNumber()).toString();
@@ -99,7 +100,7 @@ const EnterRaffle = () => {
               " ETH"}
             </div>
           <div>Total Participants are {PlayerNumber} </div>
-          <div>The Recent Winner is {RecentWinner} </div>
+          {account===RecentWinner.toLowerCase()?"Congratulations! You Won The Lottery... Have Fun!":<div>The Recent Winner is {RecentWinner} </div>}
         </div>
         </div>
       ) : (
