@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Getting Started with Raffle__Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Get Live View Here: [Jackpot](https://mrtechnostart.on.fleek.co/).
 
 ## Available Scripts
 
