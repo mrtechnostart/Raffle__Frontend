@@ -1,6 +1,10 @@
 # Getting Started with Raffle__Frontend
 
-Get Live View Here: [Jackpot](https://mrtechnostart.on.fleek.co/).
+Get Live View Here: [Jackpot](https://mrtechnostart.on.fleek.co/)
+
+# Hardhat Backend Code:
+
+[Backend Code](https://github.com/mrtechnostart/Raffle__Backend__Hardhat)
 
 ## Available Scripts
 
